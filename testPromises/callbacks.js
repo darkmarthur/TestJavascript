@@ -13,14 +13,14 @@ function getPosts() {
     }, 1000);
 }
 
-function createPost(post) {
+function createPost(post, callback) {
     setTimeout(() => {
-        posts.push(posts);
+        posts.push(post);
+        callback();
     }, 2000);
 }
 
-getPosts();
 createPost({
     title: "thi embe",
-    body: "adasdasdsdqweq"
-});
+    body: "3"
+}, getPosts);
